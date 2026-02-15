@@ -217,7 +217,7 @@ class UserModel {
   static async create(deviceId, platformData = {}) {
     const now = new Date();
     const userId = Math.floor(Math.random() * 1000);
-    const username = `.gg/sgclassic<color=orange><sup>#${userId}`;
+    const username = `.gg/sgbash<color=orange><sup>#${userId}`;
 
     const user = {
       id: userId,
@@ -1875,8 +1875,8 @@ class TournamentXController {
       minVersion: "0.56",
       startTime: new Date(),
       endTime: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000),
-      nameKey: "(.gg/sgclassic) Block Dash 1v1",
-      descriptionKey: "Practice your skills in the Stumble Classic TournamentX! mode!",
+      nameKey: "(.gg/sgbash) S4 - 1v1 Block Dash (Only Punch)",
+      descriptionKey: "Practice your skills in the Stumble Bash TournamentX! mode!",
       listItemBackgroundImage: "SharkTanic_Background_Image_Tournaments_Card",
       detailsPanelBackgroundImage: "SharkTanic_Background_Image_Tournaments",
       prizeBannerColour: "#005577",
@@ -1895,7 +1895,7 @@ class TournamentXController {
       detailsPanelBorderColourTop: "#004080",
       detailsPanelBorderColourBottom: "#002244",
       colourData: {
-        detailsPanelMainColour: "#003366",
+        detailsPanelMainColour: "#0204af",
         detailsPanelBorderColour: "#004080",
         headerGradientRight: "#003366",
         headerGradientLeft: "#005599",
@@ -1929,8 +1929,8 @@ class TournamentXController {
       minVersion: "0.56",
       startTime: new Date(),
       endTime: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000),
-      nameKey: "(.gg/sgclassic) Block Dash Legendary 1v1",
-      descriptionKey: "Practice your skills in the Stumble Classic TournamentX! mode!",
+      nameKey: "(.gg/sgbash) S4 - 1v1 Block Dash Legendary (Only Punch)",
+      descriptionKey: "Practice your skills in the Stumble Bash TournamentX! mode!",
       listItemBackgroundImage: "AbductedAvenue_Background_Image_Tournaments_Card",
       detailsPanelBackgroundImage: "Barbie_Background_Image_Tournaments",
       prizeBannerColour: "#005577",
@@ -1949,13 +1949,13 @@ class TournamentXController {
       detailsPanelBorderColourTop: "#004080",
       detailsPanelBorderColourBottom: "#002244",
       colourData: {
-        detailsPanelMainColour: "#003366",
+        detailsPanelMainColour: "#0204af",
         detailsPanelBorderColour: "#33ffccff",
         headerGradientRight: "#07cc00ff",
         headerGradientLeft: "#33ffa0ff",
-        infoWidgetsGradientRight: "#00cc22ff",
-        infoWidgetsGradientLeft: "#0d9900ff",
-        infoWidgetsBorderColour: "#33ff66ff"
+        infoWidgetsGradientRight: "rgb(0, 163, 204)",
+        infoWidgetsGradientLeft: "rgb(0, 79, 153)",
+        infoWidgetsBorderColour: "rgb(51, 173, 255)"
       },
       rounds: [
         {
@@ -2205,7 +2205,7 @@ class MatchmakingController {
       const version = user.version || '0';
       const platform = user.userProfile?.nativePlatformName || 'null';
       const skillTier = Math.floor((user.skillRating || 0) / 1000);
-      const regionCodes = ['na', 'eu', 'as', 'sa', 'af', 'oc', 'ae'];
+      const regionCodes = ['na', 'eu', 'as', 'sa'];
       const region = regionCodes[Math.floor(Math.random() * regionCodes.length)];
 
       const matchmakingFilter = `${sharedType}_${version}_${platform}_${skillTier}_${region}`;
